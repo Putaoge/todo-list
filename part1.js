@@ -116,12 +116,12 @@ add.addEventListener('click', throttle(()=>{
             <div class="targetType">
                 <select name="pets" class="typeList">
                     <option disabled value="">請選擇事件類型</option>
-                    <option value="work">工作</option>
-                    <option value="study">學習</option>
-                    <option value="life" selected>生活</option>
-                    <option value="relationship">感情</option>
-                    <option value="Chill">休閒</option>
-                    <option value="urgent">緊急</option>
+                    <option value="工作">工作</option>
+                    <option value="學習">學習</option>
+                    <option value="生活" selected>生活</option>
+                    <option value="感情">感情</option>
+                    <option value="休閒">休閒</option>
+                    <option value="緊急">緊急</option>
                 </select>
             </div>
             <div class="submitBox">

@@ -24,7 +24,7 @@ function showTarget(){
         let text = 
         `<li class="contentItem">
                 <div class="targetText">
-                    <p class="date">${item.time[0]}</p>
+                    <p class="date">${item.time[0]}  類型: ${item.type}</p>
                     <p class="text">${item.value}</p>
                 </div>
                 <span 

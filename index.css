@@ -122,6 +122,8 @@ h3 {
     border-color: #a0cfff;
     color: #409eff;
     cursor: pointer;
+    margin-top: 60px;
+    line-height: 3vh;
 }
 .addTarget .submitBox:hover{
     color: #ffffff;
@@ -136,6 +138,7 @@ h3 {
     color: #e6a23c;
     background-color: #fdf6ec;
     border-color: #f3d19e;
+    line-height: 3vh;
 }
 .addTarget .addExitBox:hover{
     color: #fff;

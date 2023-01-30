@@ -102,10 +102,10 @@ function createOptionsWindow(event){
         if (contentItem.classList.contains('successTarget')) {
             return;
         }
-        let costTime = getDiffTime(targetInfo[rank].time[1])
+        let costTime = getDiffTime(targetInfo[index].time[1])
         setDoneState(contentItem, costTime)
-        targetInfo[rank].done = true
-        targetInfo[rank].costTime = costTime
+        targetInfo[index].done = true
+        targetInfo[index].costTime = costTime
         localStorage.setItem('Target', JSON.stringify(targetInfo))
     }
     function exit(){

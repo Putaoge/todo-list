@@ -164,7 +164,7 @@ add.addEventListener('click', throttle(()=>{
             return
         }
         addTargetBox.style.filter = 'blur(5px)'
-        if (localStorage.getItem('Target')) {
+        if (localStorage.getItem('Target') && JSON.parse(localStorage.getItem('Target')).length !== 0)) {
             let previousTarget = JSON.parse(localStorage.getItem('Target'))
             let length = previousTarget.length
             let index = previousTarget[length-1].rank

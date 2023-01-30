@@ -99,6 +99,9 @@ function createOptionsWindow(event){
     doneKey.onclick = (event)=>{
         exit()
         doneVoice.play()
+        if (contentItem.classList.contains('successTarget')) {
+            return;
+        }
         let costTime = getDiffTime(targetInfo[rank].time[1])
         setDoneState(contentItem, costTime)
         targetInfo[rank].done = true

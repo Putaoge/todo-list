@@ -224,6 +224,10 @@ function getTime(){
     return { time: [time, ms]}
 }
 function sendSuccess(){
+    let noContent = document.querySelector('.noContent')
+    if (noContent) {
+        noContent.remove()
+    }
     let cover = createCover()
     let div = document.createElement('div')
     Object.assign(div.style,{

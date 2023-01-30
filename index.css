@@ -1,4 +1,5 @@
 @import './icon/font_3870129_pt9fwbvcron/iconfont.css';
+@import './mobile.css';
 
 * {
     margin: 0;
@@ -6,10 +7,11 @@
     box-sizing: border-box;
     font-size: 18px;
 }
+
 h1{
     font-size: 0;
-    
 }
+
 textarea {
     outline: none;
 }
@@ -32,7 +34,6 @@ header {
     margin-top: 1vh;
     border-radius: 10px;
     background-color: #42b883;
-    /* background-color: #64b688bb; */
     text-align: center;
     line-height: 12vh;
     color: white;
@@ -50,35 +51,24 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-
     margin: auto;
-    overflow: auto;
+    overflow: scroll;
     border-radius: 50px;
-    /* border-top-left-radius: 0; */
     transition: .3s;
-    /* box-shadow: 0 3px 5px 1px black; */
-    /* filter: blur(5px); */
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-/* 添加界面開始 */
 
 .addTargetBox div {
     width: 80%;
-
-    /* height: 64vh; */
-    /* background-color: pink; */
-
     transition: all .3s;
-    margin: 5vh auto;
     padding: 10px;
     overflow: auto;
-    /* filter: blur(20px) */
 }
 
 .addTarget h2,
 h3 {
-    /* color: #7b8795; */
     color: #39485c;
     user-select: none;
 }
@@ -89,7 +79,6 @@ h3 {
     text-align: center;
     margin: 30px auto;
     border: 2px solid #52ab9f;
-
     border-radius: 10px;
 }
 
@@ -107,16 +96,16 @@ h3 {
 .addTarget div input,
 .addTarget div select {
     height: 5vh;
-    width: 70%;
+    width: 90%;
+    min-height: 30px;
     outline: none;
     padding: 0 2em;
     text-align: center;
-    /* border: 1.5px solid #7b8795; */
     border: 1.5px solid #7b8795;
     border-radius: 5px;
 }
 
-.addTarget .submitBox{
+.addTargetBox .addTarget .submitBox {
     width: 40%;
     background-color: #ecf5ff;
     border-color: #a0cfff;
@@ -125,14 +114,15 @@ h3 {
     margin-top: 60px;
     line-height: 3vh;
 }
-.addTarget .submitBox:hover{
+
+.addTarget .submitBox:hover {
     color: #ffffff;
     background-color: #409eff;
     border-color: #409eff;
-    
+
 }
 
-.addTarget .addExitBox {
+.addTargetBox .addTarget .addExitBox {
     width: 40%;
     cursor: pointer;
     color: #e6a23c;
@@ -140,17 +130,18 @@ h3 {
     border-color: #f3d19e;
     line-height: 3vh;
 }
-.addTarget .addExitBox:hover{
+
+.addTarget .addExitBox:hover {
     color: #fff;
     background-color: #e6a23c;
     border-color: #e6a23c;
 }
 
-.submitBox button, .addExitBox button {
+.submitBox button,
+.addExitBox button {
     width: 100%;
     height: 6vh;
     margin: 0 auto;
-    /* background-color: #9ed5cf; */
     outline: none;
     border: none;
     border-radius: 10px;
@@ -158,28 +149,11 @@ h3 {
     user-select: none;
     cursor: pointer;
 }
-
-/* .addTarget div select{
-    width: 70%;
-    height: 5vh;
-    text-align: center;
-} */
-
-/* 添加界面結束 */
-
-
-
-
-
-/* 左下角選單開始 */
 .options {
     position: fixed;
     display: flex;
     left: 1vw;
     bottom: 1vw;
-    
-
-
     border-radius: 50px;
     gap: 1vw;
 }
@@ -190,13 +164,9 @@ h3 {
     overflow: hidden;
     gap: .5vw;
     transition: .3s;
-
-    /* background-color: pink; */
 }
 
 .options .xuanxiangBox {
-    /* box-shadow: 0 0 0 2px black; */
-    /* background-color: #666; */
     width: 0;
     height: 0;
 }
@@ -207,7 +177,6 @@ h3 {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.707);
     transition: .3s;
-    transform: rotate(0deg);
 }
 
 .optionBox:hover {
@@ -218,20 +187,10 @@ h3 {
 .optionsBoxFocus {
     background-color: #95d475;
 }
-
-/* 左下角選單結束 */
-
-
-
-
-/* 內容區域盒子 */
-
-/* 沒有內容的提示 */
 .noContent {
     width: 100%;
     height: 100%;
     min-height: 100px;
-    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,41 +202,31 @@ h3 {
     max-width: 700px;
     max-height: 70vh;
     min-height: 100px;
-    /* overflow: scroll; */
     border-radius: 10px;
     float: none;
     margin: auto;
-    /* overflow: auto; */
     box-shadow: 0 3px 5px 1px #666;
     background-color: rgb(245, 245, 245);
-    /* padding: 10px; */
     transition: .3s;
-    /* filter: blur(0px); */
 
 }
 
 .contentList {
     width: 100%;
-    /* height: inherit; */
     max-height: 70vh;
     overflow: overlay;
-    /* user-select: none; */
     padding: 5px;
 }
 
 .contentItem {
     margin: 3vh auto;
     width: 95%;
-    /* height: 4vh; */
-    /* background-color: pink; */
     position: relative;
     display: flex;
-    /* flex: 1; */
     transition: .3s;
     box-shadow: 0 1px 4px 0px #999;
     padding: 2px;
     overflow: auto;
-    /* border-bottom: 1px solid #000; */
     animation: appear 1s;
     background-color: #fff;
     border-radius: 5px;
@@ -287,24 +236,22 @@ h3 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
 }
 
-.contentList .leaveMove{
+.contentList .leaveMove {
     animation: leaveMove 1s;
 }
+
 @keyframes leaveMove {
-    0%{
+    0% {
         opacity: 1;
-        /* width: 100px; */
         transform: translateX(0);
     }
 
-    100%{
-        /* width: 2000px; */
+    100% {
         opacity: 0;
         transform: translateX(-100vw);
     }
@@ -313,8 +260,6 @@ h3 {
 .targetText {
     width: 97%;
     padding: 20px 10px;
-    /* border-right: 2px solid #999; */
-
     text-indent: 2em;
 }
 
@@ -326,9 +271,7 @@ h3 {
     text-indent: 0;
     color: #999;
 }
-
-/* 完成/刪除 選項 */
-.icon-icon{
+.icon-icon {
     font-size: 20px;
     position: absolute;
     right: 5px;
@@ -336,7 +279,8 @@ h3 {
     transition: .3s;
     color: #999;
 }
-.icon-icon:hover{
+
+.icon-icon:hover {
     color: #333;
 }
 
@@ -348,29 +292,23 @@ h3 {
 }
 
 
-.successTarget{
+.successTarget {
     animation: appear 1s;
     background-color: #b3e19d;
-    /* color: white; */
-    
 }
-.successTarget .text{
+
+.successTarget .text {
     font-size: 900;
     text-shadow: 1px 1px #fff;
 }
 
-
-
-
-
-
-/* 完成/刪除選項樣式 開始 */
 .cover {
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
 }
+
 .DoneOrCancelBox {
     position: fixed;
     width: 30vw;
@@ -439,7 +377,7 @@ h3 {
 }
 
 
-.contentItem .costTime{
+.contentItem .costTime {
     position: absolute;
     bottom: 1px;
     right: 100px;
@@ -448,7 +386,8 @@ h3 {
     color: #999;
     text-shadow: 0.5px 0.5px #fff;
 }
-.icon-wancheng1{
+
+.icon-wancheng1 {
     font-size: 50px;
     transition: .3s;
 }
@@ -473,51 +412,24 @@ h3 {
 .icon-quxiao {
     margin-right: 5px;
 }
-
-/* 完成/刪除選項樣式 結束 */
-
-/* .targetText-border{
-    content: ' ';
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    border-right: 2px solid #999;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-
-
-    background-color: pink;
-} */
-
-
-
-
-@media screen and (max-width:265px){
-    header{
+@media screen and (max-width:265px) {
+    header {
         font-size: 20px;
     }
-    *{
-        /* font-size: 10px; */
-    }
-    .contentItem{
-        /* height: 100px; */
-    }
-    .costTime{
-        /* font-size: 6px; */
+    .costTime {
         display: none;
     }
-    .date{
+
+    .date {
         display: none;
     }
-    .icon-wancheng1{
+    .icon-wancheng1 {
         font-size: 30px;
     }
 }
 
-@media screen and (max-height:320px){
-    header{
+@media screen and (max-height:320px) {
+    header {
         font-size: 20px;
     }
 }

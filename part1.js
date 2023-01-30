@@ -167,7 +167,8 @@ add.addEventListener('click', throttle(()=>{
         if (localStorage.getItem('Target')) {
             let previousTarget = JSON.parse(localStorage.getItem('Target'))
             let length = previousTarget.length
-            const newTarget = getTarget(length)
+            let index = previousTarget[length-1].rank
+            const newTarget = getTarget(index+1)
             previousTarget[length] = newTarget
             localStorage.setItem('Target', JSON.stringify(previousTarget))
         } else {

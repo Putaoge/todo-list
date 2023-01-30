@@ -3,12 +3,11 @@ function showTarget(){
         document.querySelector('.contentList').remove()
     }
     let div = document.createElement('div')
-    if(!localStorage.getItem('Target')){
+    if(!localStorage.getItem('Target') || getTargetInfo()==false){
         div.classList.add('noContent')
         let p = document.createElement('p')
         p.textContent = 'no list yet'
         div.append(p)
-
         contentBox.append(div)
         return 
     }
@@ -116,6 +115,7 @@ function delTarget(contentItem, index){
     setTimeout(()=>{
         contentItem.remove()
         delTargetInfo(index)
+        showTarget()
     },1000)
 }
 function delTargetInfo(index){
